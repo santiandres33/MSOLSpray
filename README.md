@@ -30,3 +30,9 @@ OutFile   - A file to output valid results to.
 Force     - Forces the spray to continue and not stop when multiple account lockouts are detected.
 URL       - The URL to spray against. Potentially useful if pointing at an API Gateway URL generated with something like FireProx to randomize the IP address you are authenticating from.
 ```
+### Example
+
+C:\PS> Invoke-MSOLSpray -UserList .\userlist.txt -Password P@ssword -URL https://api-gateway-endpoint-id.execute-api.us-east-1.amazonaws.com/fireprox -OutFile valid-users.txt
+Description
+-----------
+This command uses the specified FireProx URL to spray from randomized IP addresses and writes the output to a file. See this for FireProx setup: https://github.com/ustayready/fireprox.
